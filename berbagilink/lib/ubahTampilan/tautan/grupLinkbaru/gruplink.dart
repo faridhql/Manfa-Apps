@@ -1,4 +1,3 @@
-
 // ignore_for_file: camel_case_types
 
 // ignore: unused_import
@@ -93,7 +92,6 @@ class _gruplinkState extends State<gruplink>
                         color: Colors.black, fontWeight: FontWeight.bold)),
               ],
             ),
-        
           ]),
         ),
         children: <Widget>[
@@ -135,12 +133,8 @@ class _gruplinkState extends State<gruplink>
                     // labelColor: Colors.black,
                     // indicatorColor: Colors.black,
                     // indicatorWeight: 02,
-
-                    indicator: BoxDecoration(
-                      color: Colors.black,
-                      border: Border.all(),
-                      borderRadius: BorderRadius.circular(1),
-                    ),
+                    labelColor: Colors.black,
+                    indicator: UnderlineTabIndicator(),
                     controller: tabController,
                     tabs: const [
                       Tab(
