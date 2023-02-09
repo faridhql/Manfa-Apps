@@ -575,6 +575,7 @@ class _CustomState extends State<Custom> {
           height: 15,
         ),
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Card(
               color: const Color(0xE0259AB9),
@@ -608,34 +609,37 @@ class _CustomState extends State<Custom> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Column(
-                  children: [
-                    const Align(
-                      // alignment: Alignment.bottomLeft,
-                      child: Text(
-                        'Blur',
-                        style: TextStyle(
-                            fontFamily: 'Ubuntu',
-                            fontWeight: FontWeight.w500,
-                            fontSize: 14,
-                            color: Colors.black),
-                      ),
-                    ),
-                    SizedBox(
-                      width: w / 1.6,
-                      child: Slider(
-                        max: w / 1.6,
-                        value: _currentSliderPrimaryValue,
-                        secondaryTrackValue: _currentSliderPrimaryValue,
-                        label: _currentSliderPrimaryValue.round().toString(),
-                        onChanged: (double value) {
-                          setState(() {
-                            _currentSliderPrimaryValue = value;
-                          });
-                        },
-                      ),
-                    ),
-                  ],
+                const Align(
+                  child: Text(
+                    'Blur',
+                    style: TextStyle(
+                        fontFamily: 'Ubuntu',
+                        fontWeight: FontWeight.w500,
+                        fontSize: 14,
+                        color: Colors.black),
+                  ),
+                ),
+                SizedBox(
+                  width: w / 1.6,
+                  child: Slider(
+                    max: w / 1.6,
+                    value: _currentSliderPrimaryValue,
+                    secondaryTrackValue: _currentSliderPrimaryValue,
+                    label: _currentSliderPrimaryValue.round().toString(),
+                    onChanged: (double value) {
+                      setState(() {
+                        _currentSliderPrimaryValue = value;
+                      });
+                    },
+                  ),
+                ),
+                const Text(
+                  'Transparansi',
+                  style: TextStyle(
+                      fontFamily: 'Ubuntu',
+                      fontWeight: FontWeight.w500,
+                      fontSize: 14,
+                      color: Colors.black),
                 ),
                 SizedBox(
                   width: w / 1.6,
