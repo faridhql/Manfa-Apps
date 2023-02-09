@@ -146,11 +146,9 @@ class _judulbaruState extends State<judulbaru>
                   decoration: BoxDecoration(),
                   child: TabBar(
                     unselectedLabelColor: Colors.black,
-                    // labelColor: Colors.black,
-                    // indicatorColor: Colors.black,
-                    // indicatorWeight: 02,
 
                     indicator: BoxDecoration(
+                      
                       color: Colors.black,
                       border: Border.all(),
                       borderRadius: BorderRadius.circular(1),
