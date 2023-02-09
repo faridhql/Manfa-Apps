@@ -1,15 +1,9 @@
+import 'package:berbagilink/tema/tema.dart';
 import 'package:berbagilink/ubahTampilan/UbahTampilan.dart';
 import 'package:berbagilink/analisis%20_link/analisis.dart';
 import 'package:berbagilink/pratinjau/pratinjau.dart';
-import 'package:berbagilink/pratinjau/preview.dart';
-import 'package:berbagilink/tabbar%20judul/warnajudul.dart';
-import 'package:berbagilink/tabbar%20judul/posisi.dart';
-
-import 'package:berbagilink/tabbar%20judul/tabbar.dart';
 import 'package:berbagilink/widgets/custom_wrap.dart';
 import 'package:flutter/material.dart';
-import '../widgets/custom_wrap.dart';
-import 'package:berbagilink/halamanUtama/halamanutama.dart';
 
 class Tabberbagilink extends StatefulWidget {
   const Tabberbagilink({Key? key}) : super(key: key);
@@ -53,7 +47,7 @@ class _TabberbagilinkState extends State<Tabberbagilink> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Analisis(),
+                    builder: (context) => const Analisis(),
                   ),
                 );
               },
@@ -68,7 +62,7 @@ class _TabberbagilinkState extends State<Tabberbagilink> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Pratinjau(),
+                    builder: (context) => const Pratinjau(),
                   ),
                 );
               },
@@ -80,12 +74,10 @@ class _TabberbagilinkState extends State<Tabberbagilink> {
             ),
             MITMenuContainer.none(
               onTap: () {
-                //  Navigator.push(
-                //   context,
-                //   MaterialPageRoute(
-                //     builder: (context) => 
-                //   ),
-                // );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Tema()),
+                );
               },
               image: Image.asset(
                 'images/tema.png',
