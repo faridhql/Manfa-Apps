@@ -1,7 +1,5 @@
 import 'dart:io';
 
-import 'package:berbagilink/widgets/text.dart';
-import 'package:berbagilink/widgets/colorStyle.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 

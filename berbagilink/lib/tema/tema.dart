@@ -47,12 +47,7 @@ class _TemaState extends State<Tema> with SingleTickerProviderStateMixin {
           children: [
             IconButton(
               onPressed: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(
-                //     builder: (context) => BerbagiLink(),
-                //   ),
-                // );
+                Navigator.pop(context);
               },
               icon: Icon(
                 Icons.arrow_back,
@@ -151,6 +146,9 @@ class _TemaState extends State<Tema> with SingleTickerProviderStateMixin {
                     ],
                   ),
                 ),
+                SizedBox(
+                  height: 20,
+                )
               ],
             ),
           ),

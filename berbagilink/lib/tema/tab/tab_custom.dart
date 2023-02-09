@@ -676,21 +676,31 @@ class _CustomState extends State<Custom> {
   // ignore: non_constant_identifier_names
   Widget ContainerSimpan() {
     double w = MediaQuery.of(context).size.width;
-    return SizedBox(
-      height: 50,
-      width: w / 1,
-      child: ElevatedButton(
-          style: ButtonStyle(
-              backgroundColor:
-                  MaterialStateProperty.all(const Color(0xE0259AB9)),
-              shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(15)))),
-          onPressed: () {},
-          child: const Text(
-            'Simpan',
-            style: TextStyle(
-                fontSize: 16, fontWeight: FontWeight.w500, color: Colors.black),
-          )),
+    double h = MediaQuery.of(context).size.height;
+    return Column(
+      children: [
+        SizedBox(
+          height: 50,
+          width: w / 1,
+          child: ElevatedButton(
+              style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all(const Color(0xE0259AB9)),
+                  shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15)))),
+              onPressed: () {},
+              child: const Text(
+                'Simpan',
+                style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.black),
+              )),
+        ),
+        SizedBox(
+          height: h / 3,
+        )
+      ],
     );
   }
 }

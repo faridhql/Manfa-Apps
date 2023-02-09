@@ -125,6 +125,7 @@ class _LinkbaruState extends State<Linkbaru>
                 Container(
                   decoration: const BoxDecoration(),
                   child: TabBar(
+                    isScrollable: true,
                     unselectedLabelColor: Colors.black,
                     // labelColor: Colors.black,
                     // indicatorColor: Colors.black,
