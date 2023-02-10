@@ -1,6 +1,4 @@
-import 'package:berbagilink/ubahTampilan/UbahTampilan.dart';
 import 'package:berbagilink/halamanUtama/halamanutama.dart';
-import 'package:berbagilink/halamanUtama/tab_berbagilink.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,5 +22,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-

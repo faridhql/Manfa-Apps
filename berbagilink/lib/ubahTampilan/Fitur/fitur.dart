@@ -5,8 +5,6 @@ import 'package:berbagilink/widgets/text.dart';
 import 'package:berbagilink/widgets/colorStyle.dart';
 import 'package:flutter/material.dart';
 
-// ignore: unused_import
-import 'dart:io';
 
 import 'upload_logo.dart';
 

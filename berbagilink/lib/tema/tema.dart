@@ -153,6 +153,9 @@ class _TemaState extends State<Tema> with SingleTickerProviderStateMixin {
                     ],
                   ),
                 ),
+                SizedBox(
+                  height: 20,
+                )
               ],
             ),
           ),

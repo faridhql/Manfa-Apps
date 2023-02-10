@@ -130,12 +130,8 @@ class _LinkbaruState extends State<Linkbaru>
                     // labelColor: Colors.black,
                     // indicatorColor: Colors.black,
                     // indicatorWeight: 02,
-
-                    indicator: BoxDecoration(
-                      color: Colors.black,
-                      border: Border.all(),
-                      borderRadius: BorderRadius.circular(1),
-                    ),
+                    labelColor: Colors.black,
+                    indicator: UnderlineTabIndicator(),
                     controller: tabController,
                     
                     tabs:   const [
@@ -152,7 +148,7 @@ class _LinkbaruState extends State<Linkbaru>
                       // 2
                       Tab(
                         child: Text(
-                          "sublink",
+                          "Sublink",
                           style: TextStyle(
                             fontFamily: 'ubuntu',
                             fontSize: 17,

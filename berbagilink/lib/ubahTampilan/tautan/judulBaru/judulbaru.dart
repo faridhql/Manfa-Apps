@@ -1,4 +1,3 @@
-
 // ignore: unused_import
 import 'package:berbagilink/widgets/text.dart';
 // ignore: unused_import
@@ -69,32 +68,30 @@ class _judulbaruState extends State<judulbaru>
               10,
             ),
           ),
-          color:  Color.fromARGB(225,37, 154, 185)),
+          color: Color.fromARGB(225, 37, 154, 185)),
       margin: const EdgeInsets.only(left: 13, right: 13, bottom: 13, top: 13),
       child: ExpansionTile(
-        
         collapsedIconColor: const Color.fromARGB(255, 0, 0, 0),
         title: Container(
           transform: Matrix4.translationValues(8, 0, 10),
-          decoration: const BoxDecoration(color: Color.fromRGBO(37, 154, 185,0.1)),
+          decoration:
+              const BoxDecoration(color: Color.fromRGBO(37, 154, 185, 0.1)),
           child:
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
             Row(
-              children: const[
+              children: const [
                 Icon(
                   Icons.file_copy_outlined,
                   // color: biruColor,
                   size: 25,
                   color: Colors.black,
                 ),
-                 SizedBox(
+                SizedBox(
                   width: 10,
                 ),
-                 Text('Buat Judul Baru',
-                    style: TextStyle(color: Colors.black,
-                    fontWeight: FontWeight.bold
-                    )),
-                    
+                Text('Buat Judul Baru',
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold)),
               ],
             ),
             ElevatedButton(
@@ -148,16 +145,9 @@ class _judulbaruState extends State<judulbaru>
                 Container(
                   decoration: BoxDecoration(),
                   child: TabBar(
+                    labelColor: Colors.black,
                     unselectedLabelColor: Colors.black,
-                    // labelColor: Colors.black,
-                    // indicatorColor: Colors.black,
-                    // indicatorWeight: 02,
-
-                    indicator: BoxDecoration(
-                      color: Colors.black,
-                      border: Border.all(),
-                      borderRadius: BorderRadius.circular(1),
-                    ),
+                    indicator: UnderlineTabIndicator(),
                     controller: tabController,
                     tabs: const [
                       Tab(
