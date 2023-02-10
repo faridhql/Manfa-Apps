@@ -2,7 +2,6 @@ import 'package:berbagilink/halamanUtama/halamanutama.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/colorStyle.dart';
-import '../widgets/text.dart';
 import 'tab/tab_basic.dart';
 import 'tab/tab_custom.dart';
 import 'tab/tab_vectaraid.dart';

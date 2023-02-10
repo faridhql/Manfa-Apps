@@ -156,7 +156,7 @@ class _tab2State extends State<tab2> {
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      primary: black1Color,
+                      backgroundColor: black1Color,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(
                           64,

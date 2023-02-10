@@ -546,7 +546,6 @@ class _CustomState extends State<Custom> {
 
   // ignore: non_constant_identifier_names
   Widget TambahkanBackground() {
-    double h = MediaQuery.of(context).size.height;
     double w = MediaQuery.of(context).size.width;
 
     return Container(

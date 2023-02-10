@@ -6,7 +6,7 @@ class TabDashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('dasboard'),
+      body: Center(child: Text('dasboard')),
     );
   }
 }

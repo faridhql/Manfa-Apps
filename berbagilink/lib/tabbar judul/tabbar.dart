@@ -15,7 +15,6 @@ class _artikelbaruState extends State<tab1> {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Container(
       child: Row(
         children: const [

@@ -72,7 +72,7 @@ class _daftarLinkState extends State<tab3> {
                           groupValue: _value,
                           onChanged: (value) {
                             setState(() {
-                              _value = value as int?;
+                              _value = value;
                             });
                           },
                         ),
@@ -117,7 +117,7 @@ class _daftarLinkState extends State<tab3> {
                               groupValue: _value,
                               onChanged: (value) {
                                 setState(() {
-                                  _value = value as int?;
+                                  _value = value;
                                 });
                               },
                             ),
@@ -163,7 +163,7 @@ class _daftarLinkState extends State<tab3> {
                               groupValue: _value,
                               onChanged: (value) {
                                 setState(() {
-                                  _value = value as int?;
+                                  _value = value;
                                 });
                               },
                             ),
@@ -222,7 +222,7 @@ class _daftarLinkState extends State<tab3> {
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
+                      backgroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(
                           64,
@@ -243,7 +243,7 @@ class _daftarLinkState extends State<tab3> {
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      primary: black1Color,
+                      backgroundColor: black1Color,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(
                           64,

@@ -7,8 +7,6 @@ import 'package:berbagilink/ubahTampilan/Fitur/fitur.dart';
 import 'package:berbagilink/ubahTampilan/header.dart';
 import 'package:berbagilink/ubahTampilan/tautan/tautan.dart';
 import 'package:flutter/material.dart';
-import 'package:berbagilink/main.dart';
-import 'dart:io';
 
 class UbahTampilan extends StatefulWidget {
   IconData? icon;

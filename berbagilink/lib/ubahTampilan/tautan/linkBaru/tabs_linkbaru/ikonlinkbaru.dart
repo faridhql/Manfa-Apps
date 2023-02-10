@@ -165,7 +165,7 @@ File? image;
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
+                      backgroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(
                           64,
@@ -186,7 +186,7 @@ File? image;
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      primary: black1Color,
+                      backgroundColor: black1Color,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(
                           64,

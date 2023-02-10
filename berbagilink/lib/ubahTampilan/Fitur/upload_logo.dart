@@ -65,7 +65,7 @@ class _LogoFooterState extends State<LogoFooter> {
             ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
-                primary: Color.fromARGB(255, 0, 0, 0),
+                backgroundColor: Color.fromARGB(255, 0, 0, 0),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(
                     20,
@@ -273,7 +273,7 @@ class _LogoFooterState extends State<LogoFooter> {
                         child: ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
-                            primary: Colors.white,
+                            backgroundColor: Colors.white,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(
                                 64,
@@ -294,7 +294,7 @@ class _LogoFooterState extends State<LogoFooter> {
                         child: ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
-                            primary: black1Color,
+                            backgroundColor: black1Color,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(
                                 64,

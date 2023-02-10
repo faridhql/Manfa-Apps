@@ -6,8 +6,6 @@ import 'package:berbagilink/ubahTampilan/tautan/grupLinkbaru/tab_gruplink/link_g
 import 'package:berbagilink/ubahTampilan/tautan/grupLinkbaru/tab_gruplink/ubahwarnagrupLink.dart';
 // ignore: unused_import
 import 'package:berbagilink/widgets/colorStyle.dart';
-import 'package:berbagilink/tabbar%20judul/warnajudul.dart';
-import 'package:berbagilink/tabbar%20judul/posisi.dart';
 import 'package:flutter/material.dart';
 
 // ignore: unused_import

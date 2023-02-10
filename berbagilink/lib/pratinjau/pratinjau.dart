@@ -143,7 +143,7 @@ class _PratinjauState extends State<Pratinjau> {
                   child: ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                        primary: const Color.fromARGB(
+                        backgroundColor: const Color.fromARGB(
                           255,
                           247,
                           171,

@@ -1,9 +1,7 @@
-import 'dart:io';
 
 import 'package:berbagilink/widgets/text.dart';
 import 'package:berbagilink/widgets/colorStyle.dart';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
 
 class arahkanlinkbaru extends StatefulWidget {
   const arahkanlinkbaru({super.key});
@@ -105,7 +103,7 @@ class _Tabs1State extends State<arahkanlinkbaru>
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
+                      backgroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(
                           64,
@@ -126,7 +124,7 @@ class _Tabs1State extends State<arahkanlinkbaru>
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      primary: black1Color,
+                      backgroundColor: black1Color,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(
                           64,

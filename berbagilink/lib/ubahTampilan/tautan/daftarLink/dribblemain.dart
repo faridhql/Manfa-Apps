@@ -1,12 +1,4 @@
 import 'package:berbagilink/ubahTampilan/tautan/daftarLink/tab_daftarlink/dribble/dribble.dart';
-import 'package:berbagilink/ubahTampilan/tautan/daftarLink/tab_daftarlink/instagram/instagram.dart';
-import 'package:berbagilink/ubahTampilan/tautan/linkBaru/tabs_linkbaru/animasi.dart';
-import 'package:berbagilink/ubahTampilan/tautan/linkBaru/tabs_linkbaru/arahkan.dart';
-import 'package:berbagilink/ubahTampilan/tautan/linkBaru/tabs_linkbaru/ikonlinkbaru.dart';
-import 'package:berbagilink/ubahTampilan/tautan/linkBaru/tabs_linkbaru/judul.dart';
-import 'package:berbagilink/ubahTampilan/tautan/linkBaru/tabs_linkbaru/penjadwalanLink.dart';
-import 'package:berbagilink/ubahTampilan/tautan/linkBaru/tabs_linkbaru/sublink.dart';
-import 'package:berbagilink/ubahTampilan/tautan/linkBaru/tabs_linkbaru/warnalinkbaru.dart';
 import 'package:flutter/material.dart';
 
 // ignore: camel_case_types
