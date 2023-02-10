@@ -3,7 +3,6 @@
 import 'package:berbagilink/widgets/text.dart';
 import 'package:berbagilink/widgets/colorStyle.dart';
 import 'package:berbagilink/halamanUtama/halamanutama.dart';
-import 'package:berbagilink/halamanUtama/tab_berbagilink.dart';
 import 'package:berbagilink/ubahTampilan/Fitur/fitur.dart';
 import 'package:berbagilink/ubahTampilan/header.dart';
 import 'package:berbagilink/ubahTampilan/tautan/tautan.dart';
