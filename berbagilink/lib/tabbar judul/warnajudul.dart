@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names, camel_case_types
+
 import 'dart:io';
 
 import 'package:berbagilink/widgets/text.dart';
@@ -16,6 +18,7 @@ class _tab2State extends State<tab2> {
   File? image;
 
   Future getImage() async {
+    // ignore: no_leading_underscores_for_local_identifiers
     final ImagePicker _picker = ImagePicker();
     final XFile? ImagePicked =
         await _picker.pickImage(source: ImageSource.gallery);
@@ -31,7 +34,7 @@ class _tab2State extends State<tab2> {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
             bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
         border: Border.all(color: Colors.black),
       ),
@@ -48,7 +51,7 @@ class _tab2State extends State<tab2> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Ubah Warna"),
+                const Text("Ubah Warna"),
                 Switch(
                     focusColor: Colors.black,
                     activeColor: Colors.blue,
@@ -65,14 +68,14 @@ class _tab2State extends State<tab2> {
             ),
 
             Row(
-              children: [
+              children: const [
                 Text(
                   "Warna Judul",
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
 
@@ -85,18 +88,18 @@ class _tab2State extends State<tab2> {
                 fontSize: 20,
               ),
               decoration: InputDecoration(
-                hintStyle: TextStyle(
+                hintStyle: const TextStyle(
                   fontWeight: FontWeight.w400,
                   fontStyle: FontStyle.normal,
                   fontSize: 14,
                   color: Colors.grey,
                 ),
-                prefixIcon: Icon(Icons.color_lens,
+                prefixIcon: const Icon(Icons.color_lens,
                 color: Colors.blueAccent,),
                 hintText: '#FFFFFF',
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
-                  borderSide: BorderSide(
+                  borderSide: const BorderSide(
                     color: Colors.grey,
                   ),
                 ),
@@ -109,7 +112,7 @@ class _tab2State extends State<tab2> {
               height: 16,
             ),
 
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
 
@@ -131,6 +134,7 @@ class _tab2State extends State<tab2> {
                   child: ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
+                      // ignore: deprecated_member_use
                       primary: Colors.white,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(

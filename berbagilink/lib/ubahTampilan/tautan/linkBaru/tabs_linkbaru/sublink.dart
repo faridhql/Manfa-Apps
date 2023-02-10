@@ -17,8 +17,7 @@ final List<Tab> myTabs = List.generate(
   (index) => Tab(text: 'TAB $index'),
 );
 
-class _Tabs1State extends State<subLink>
-    with SingleTickerProviderStateMixin {
+class _Tabs1State extends State<subLink> with SingleTickerProviderStateMixin {
   late TabController tabController;
 
   // ignore: prefer_typing_uninitialized_variables
@@ -41,12 +40,10 @@ class _Tabs1State extends State<subLink>
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return  Container(
+    return Container(
       decoration: BoxDecoration(
-        
         color: Colors.white,
-        borderRadius: BorderRadius.only(
-        
+        borderRadius: const BorderRadius.only(
             bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
         border: Border.all(color: Colors.black),
       ),
@@ -60,38 +57,6 @@ class _Tabs1State extends State<subLink>
               height: 16,
             ),
             //Judul
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text("Tampilkan Judul"),
-                Switch(
-                    focusColor: Colors.black,
-                    
-                    activeColor: Colors.blue,
-                    value: isDisabled,
-                    onChanged: (check) {
-                      setState(() {
-                        isDisabled = check;
-                      });
-                    }),
-              ],
-            ),
-            const SizedBox(
-              height: 16,
-            ),
-
-            Row(
-              children: [
-                Text(
-                  "Judul",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-
             TextField(
               autocorrect: false,
               keyboardType: TextInputType.text,
@@ -100,7 +65,7 @@ class _Tabs1State extends State<subLink>
                 fontSize: 20,
               ),
               decoration: InputDecoration(
-                hintStyle: TextStyle(
+                hintStyle: const TextStyle(
                   fontWeight: FontWeight.w400,
                   fontStyle: FontStyle.normal,
                   fontSize: 14,
@@ -109,7 +74,7 @@ class _Tabs1State extends State<subLink>
                 hintText: 'Masukkan Judul',
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(12),
-                  borderSide: BorderSide(
+                  borderSide: const BorderSide(
                     color: Colors.grey,
                   ),
                 ),
@@ -118,9 +83,74 @@ class _Tabs1State extends State<subLink>
                 ),
               ),
             ),
-            
 
-            SizedBox(
+            const SizedBox(
+              height: 16,
+            ),
+
+            Row(
+              children: const [
+                Text(
+                  "Sublink Generate",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Column(
+              children: [
+                Container(
+                  height: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(
+                      10,
+                    ),
+                    border: Border.all(
+                      width: 0.3,
+                      color: black1Color,
+                    ),
+                  ),
+                  child: ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        // ignore: deprecated_member_use
+                        backgroundColor: Colors.orangeAccent.shade100,
+                        
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(
+                            10,
+                          ),
+                        ),
+                      ),
+                      child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          
+                          Row(
+                            children: [
+                              const Padding(padding: EdgeInsets.only(left: 10)),
+                              Text(
+                                "Pilih Tipe",
+                                style: TextStyle(
+                                  color: black1Color,
+                                  fontWeight: FontWeight.w800,
+                                ),
+                              ),
+                            ],
+                          ),
+                              Row(
+                                children: const [
+                                  Icon(Icons.keyboard_arrow_down_sharp,color: Colors.black,),
+                                ],
+                              )
+                        ],
+                      )),
+                )
+              ],
+            ),
+            const SizedBox(
               height: 30,
             ),
 

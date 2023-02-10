@@ -41,7 +41,7 @@ class _LogoFooterState extends State<LogoFooter> {
         collapsedIconColor: const  Color.fromARGB(255, 0, 0, 0),
         title: Container(
           transform: Matrix4.translationValues(8, 0, 10),
-          decoration: const BoxDecoration(color:  Color.fromARGB(225,37, 154, 185)),
+          decoration: const BoxDecoration(color:  Color.fromRGBO(37, 154, 185, 0.1)),
           child:
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
             Row(

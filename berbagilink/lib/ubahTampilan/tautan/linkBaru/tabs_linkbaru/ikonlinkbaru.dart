@@ -23,7 +23,17 @@ class _Tabs1State extends State<ikonLinkBaru>
 
   // ignore: prefer_typing_uninitialized_variables
   var kTitleTextStyle;
+File? image;
 
+  Future getImage() async {
+    // ignore: no_leading_underscores_for_local_identifiers
+    final ImagePicker _picker = ImagePicker();
+    // ignore: non_constant_identifier_names
+    final XFile? ImagePicked =
+        await _picker.pickImage(source: ImageSource.gallery);
+    image = File(ImagePicked!.path);
+    setState(() {});
+  }
   @override
   void initState() {
     tabController = TabController(length: 3, vsync: this);
@@ -45,7 +55,7 @@ class _Tabs1State extends State<ikonLinkBaru>
       decoration: BoxDecoration(
         
         color: Colors.white,
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
         
             bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
         border: Border.all(color: Colors.black),
@@ -60,67 +70,80 @@ class _Tabs1State extends State<ikonLinkBaru>
               height: 16,
             ),
             //Judul
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text("Tampilkan Judul"),
-                Switch(
-                    focusColor: Colors.black,
-                    
-                    activeColor: Colors.blue,
-                    value: isDisabled,
-                    onChanged: (check) {
-                      setState(() {
-                        isDisabled = check;
-                      });
-                    }),
-              ],
-            ),
-            const SizedBox(
-              height: 16,
-            ),
-
-            Row(
-              children: [
-                Text(
-                  "Judul",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-
-            TextField(
-              autocorrect: false,
-              keyboardType: TextInputType.text,
-              // obscureText: _obsecure,
-              style: const TextStyle(
-                fontSize: 20,
-              ),
-              decoration: InputDecoration(
-                hintStyle: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontStyle: FontStyle.normal,
-                  fontSize: 14,
-                  color: Colors.grey,
-                ),
-                hintText: 'Masukkan Judul',
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
-                  borderSide: BorderSide(
-                    color: Colors.grey,
+           Row(
+                children: const [
+                  Text(
+                    "Gantikan ikon Sesuai keinginan anda",
+                    style: TextStyle(fontWeight: FontWeight.bold),
                   ),
-                ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(15),
-                ),
+                ],
               ),
-            ),
-            
-
-            SizedBox(
+              const SizedBox(height: 30,),
+ Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      image != null
+                          ? SizedBox(
+                              width: size.width * 0.82,
+                              height: size.height * 0.15,
+                              child: Image.file(
+                                image!,
+                                fit: BoxFit.cover,
+                              ))
+                          : GestureDetector(
+                              onTap: () async {
+                                await getImage();
+                              },
+                              child: Container(
+                                width: size.width * 0.82,
+                                height: size.height * 0.15,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(
+                                    8,
+                                  ),
+                                  color: greyColor,
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: const [
+                                    Icon(
+                                      Icons.upload,
+                                      size: 40,
+                                    ),
+                                    Text(
+                                      "Upload Logo Anda",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 15),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                      Column(
+                        children: [
+                          SizedBox(
+                            height: size.height * 00.019,
+                          ),
+                          GestureDetector(
+                            onTap: () {
+                              setState(
+                                () {
+                                  image = null;
+                                },
+                              );
+                            },
+                            child: const Padding(
+                              padding: EdgeInsets.only(
+                                right: 0,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+            const SizedBox(
               height: 30,
             ),
 

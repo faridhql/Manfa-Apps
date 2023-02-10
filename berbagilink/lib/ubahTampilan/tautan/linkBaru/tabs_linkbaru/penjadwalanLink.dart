@@ -5,6 +5,7 @@ import 'package:berbagilink/widgets/colorStyle.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
+// ignore: camel_case_types
 class penjadwalanLink extends StatefulWidget {
   const penjadwalanLink({super.key});
 
@@ -41,145 +42,188 @@ class _Tabs1State extends State<penjadwalanLink>
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return  Container(
-      decoration: BoxDecoration(
-        
-        color: Colors.white,
-        borderRadius: BorderRadius.only(
-        
-            bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
-        border: Border.all(color: Colors.black),
-      ),
+    return  SingleChildScrollView(
       child: Container(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 15,
+        decoration: BoxDecoration(
+          
+          color: Colors.white,
+          borderRadius: const BorderRadius.only(
+          
+              bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
+          border: Border.all(color: Colors.black),
         ),
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 16,
-            ),
-            //Judul
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text("Tampilkan Judul"),
-                Switch(
-                    focusColor: Colors.black,
-                    
-                    activeColor: Colors.blue,
-                    value: isDisabled,
-                    onChanged: (check) {
-                      setState(() {
-                        isDisabled = check;
-                      });
-                    }),
-              ],
-            ),
-            const SizedBox(
-              height: 16,
-            ),
-
-            Row(
-              children: [
-                Text(
-                  "Judul",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-
-            TextField(
-              autocorrect: false,
-              keyboardType: TextInputType.text,
-              // obscureText: _obsecure,
-              style: const TextStyle(
-                fontSize: 20,
+        child: Container(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 15,
+          ),
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 16,
               ),
-              decoration: InputDecoration(
-                hintStyle: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontStyle: FontStyle.normal,
-                  fontSize: 14,
-                  color: Colors.grey,
+              //Judul
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text("Tampilkan Judul"),
+                  Switch(
+                      focusColor: Colors.black,
+                      
+                      activeColor: Colors.blue,
+                      value: isDisabled,
+                      onChanged: (check) {
+                        setState(() {
+                          isDisabled = check;
+                        });
+                      }),
+                ],
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+    
+              Row(
+                children: const [
+                  Text(
+                    "Jadwal mulai",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+    
+              TextField(
+                autocorrect: false,
+                keyboardType: TextInputType.text,
+                // obscureText: _obsecure,
+                style: const TextStyle(
+                  fontSize: 20,
                 ),
-                hintText: 'Masukkan Judul',
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
-                  borderSide: BorderSide(
+                decoration: InputDecoration(
+                  hintStyle: const TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 14,
                     color: Colors.grey,
                   ),
-                ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(15),
+                  hintText: 'Masukkan Judul',
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: const BorderSide(
+                      color: Colors.grey,
+                    ),
+                  ),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
                 ),
               ),
-            ),
-            
-
-            SizedBox(
-              height: 30,
-            ),
-
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(
-                      64,
-                    ),
-                    border: Border.all(
-                      width: 1.5,
-                      color: black1Color,
+    const SizedBox(height: 30,),
+                  Row(
+                children: const [
+                  Text(
+                    "Jadwal Akhir",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+    
+              TextField(
+                autocorrect: false,
+                keyboardType: TextInputType.text,
+                // obscureText: _obsecure,
+                style: const TextStyle(
+                  fontSize: 20,
+                ),
+                decoration: InputDecoration(
+                  hintStyle: const TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 14,
+                    color: Colors.grey,
+                  ),
+                  hintText: 'Masukkan Judul',
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: const BorderSide(
+                      color: Colors.grey,
                     ),
                   ),
-                  height: size.height * 00.068,
-                  width: size.width * 0.40,
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.white,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(
-                          64,
-                        ),
-                      ),
-                    ),
-                    child: Text(
-                      SetText.batal,
-                      style: batalStyle,
-                      textAlign: TextAlign.center,
-                    ),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
                   ),
                 ),
-                SizedBox(
-                  height: size.height * 00.068,
-                  width: size.width * 0.40,
-                  // padding: const EdgeInsets.only(left: 10),
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      primary: black1Color,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(
-                          64,
-                        ),
+              ),
+              
+    
+              const SizedBox(
+                height: 30,
+              ),
+    
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(
+                        64,
+                      ),
+                      border: Border.all(
+                        width: 1.5,
+                        color: black1Color,
                       ),
                     ),
-                    child: Text(
-                      SetText.simpan,
-                      style: simpanStyle,
-                      textAlign: TextAlign.center,
+                    height: size.height * 00.068,
+                    width: size.width * 0.40,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(
+                            64,
+                          ),
+                        ),
+                      ),
+                      child: Text(
+                        SetText.batal,
+                        style: batalStyle,
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                   ),
-                ),
-              ],
-            ),
-          ],
+                  SizedBox(
+                    height: size.height * 00.068,
+                    width: size.width * 0.40,
+                    // padding: const EdgeInsets.only(left: 10),
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        primary: black1Color,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(
+                            64,
+                          ),
+                        ),
+                      ),
+                      child: Text(
+                        SetText.simpan,
+                        style: simpanStyle,
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 30,)
+            ],
+
+          ),
         ),
       ),
     );

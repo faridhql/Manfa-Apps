@@ -17,7 +17,8 @@ final List<Tab> myTabs = List.generate(
   (index) => Tab(text: 'TAB $index'),
 );
 
-class _Tabs1State extends State<grupLinkbaru> with SingleTickerProviderStateMixin {
+class _Tabs1State extends State<grupLinkbaru>
+    with SingleTickerProviderStateMixin {
   late TabController tabController;
 
   // ignore: prefer_typing_uninitialized_variables
@@ -45,7 +46,8 @@ class _Tabs1State extends State<grupLinkbaru> with SingleTickerProviderStateMixi
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: const BorderRadius.only(
-              bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
+              bottomLeft: Radius.circular(10),
+              bottomRight: Radius.circular(10)),
           border: Border.all(color: Colors.black),
         ),
         child: Container(
@@ -76,7 +78,7 @@ class _Tabs1State extends State<grupLinkbaru> with SingleTickerProviderStateMixi
               const SizedBox(
                 height: 16,
               ),
-    
+
               Row(
                 children: const [
                   Text(
@@ -88,7 +90,7 @@ class _Tabs1State extends State<grupLinkbaru> with SingleTickerProviderStateMixi
               const SizedBox(
                 height: 10,
               ),
-    
+
               TextField(
                 autocorrect: false,
                 keyboardType: TextInputType.text,
@@ -115,11 +117,22 @@ class _Tabs1State extends State<grupLinkbaru> with SingleTickerProviderStateMixi
                   ),
                 ),
               ),
-    
               const SizedBox(
                 height: 30,
               ),
-               TextField(
+              Row(
+                children: const [
+                  Text(
+                    "Pilih Link-Link",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+
+              const SizedBox(
+                height: 30,
+              ),
+              TextField(
                 autocorrect: false,
                 keyboardType: TextInputType.text,
                 // obscureText: _obsecure,
@@ -145,11 +158,11 @@ class _Tabs1State extends State<grupLinkbaru> with SingleTickerProviderStateMixi
                   ),
                 ),
               ),
-    
+
               const SizedBox(
                 height: 30,
               ),
-    
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -205,10 +218,9 @@ class _Tabs1State extends State<grupLinkbaru> with SingleTickerProviderStateMixi
                       ),
                     ),
                   ),
-                  
                 ],
               ),
-               const SizedBox(
+              const SizedBox(
                 height: 30,
               ),
             ],

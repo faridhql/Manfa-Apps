@@ -125,6 +125,7 @@ class _LinkbaruState extends State<Linkbaru>
                 Container(
                   decoration: const BoxDecoration(),
                   child: TabBar(
+                    isScrollable: true,
                     unselectedLabelColor: Colors.black,
                     // labelColor: Colors.black,
                     // indicatorColor: Colors.black,
@@ -136,7 +137,8 @@ class _LinkbaruState extends State<Linkbaru>
                       borderRadius: BorderRadius.circular(1),
                     ),
                     controller: tabController,
-                    tabs: const [
+                    
+                    tabs:   const [
                       // 1
                       Tab(
                         child: Text(
@@ -154,6 +156,7 @@ class _LinkbaruState extends State<Linkbaru>
                           style: TextStyle(
                             fontFamily: 'ubuntu',
                             fontSize: 17,
+                           
                           ),
                         ),
                       ),

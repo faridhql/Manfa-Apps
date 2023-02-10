@@ -6,14 +6,14 @@ import 'package:berbagilink/ubahTampilan/tautan/daftarLink/whattsappmain.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
-class DaftarArtikelmain extends StatefulWidget {
-  const DaftarArtikelmain({super.key});
+class DaftarLinkMain extends StatefulWidget {
+  const DaftarLinkMain({super.key});
 
   @override
-  State<DaftarArtikelmain> createState() => _DaftarLinkMain();
+  State<DaftarLinkMain> createState() => _DaftarLinkMain();
 }
 
-class _DaftarLinkMain extends State<DaftarArtikelmain> {
+class _DaftarLinkMain extends State<DaftarLinkMain> {
   File? image;
 
   Future getImage() async {
@@ -57,7 +57,7 @@ class _DaftarLinkMain extends State<DaftarArtikelmain> {
                   width: 10,
                 ),
                  Text(
-                  'Lihat Daftar Artikel',
+                  'Lihat Daftar Link',
                   style: TextStyle(
                     fontSize: 17, fontWeight: FontWeight.bold,fontFamily: 'ubuntu',
                     color: Colors.black

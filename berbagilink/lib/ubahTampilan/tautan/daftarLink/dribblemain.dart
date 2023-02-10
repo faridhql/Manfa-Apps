@@ -1,33 +1,29 @@
-
-// ignore_for_file: camel_case_types
-
-// ignore: unused_import
-import 'package:berbagilink/ubahTampilan/tautan/grupLinkbaru/tab_gruplink/ikongrupkbaru.dart';
-import 'package:berbagilink/ubahTampilan/tautan/grupLinkbaru/tab_gruplink/link_grup.dart';
-import 'package:berbagilink/ubahTampilan/tautan/grupLinkbaru/tab_gruplink/ubahwarnagrupLink.dart';
-// ignore: unused_import
-import 'package:berbagilink/widgets/colorStyle.dart';
-import 'package:berbagilink/tabbar%20judul/warnajudul.dart';
-import 'package:berbagilink/tabbar%20judul/posisi.dart';
+import 'package:berbagilink/ubahTampilan/tautan/daftarLink/tab_daftarlink/dribble/dribble.dart';
+import 'package:berbagilink/ubahTampilan/tautan/daftarLink/tab_daftarlink/instagram/instagram.dart';
+import 'package:berbagilink/ubahTampilan/tautan/linkBaru/tabs_linkbaru/animasi.dart';
+import 'package:berbagilink/ubahTampilan/tautan/linkBaru/tabs_linkbaru/arahkan.dart';
+import 'package:berbagilink/ubahTampilan/tautan/linkBaru/tabs_linkbaru/ikonlinkbaru.dart';
+import 'package:berbagilink/ubahTampilan/tautan/linkBaru/tabs_linkbaru/judul.dart';
+import 'package:berbagilink/ubahTampilan/tautan/linkBaru/tabs_linkbaru/penjadwalanLink.dart';
+import 'package:berbagilink/ubahTampilan/tautan/linkBaru/tabs_linkbaru/sublink.dart';
+import 'package:berbagilink/ubahTampilan/tautan/linkBaru/tabs_linkbaru/warnalinkbaru.dart';
 import 'package:flutter/material.dart';
 
-// ignore: unused_import
-import '../../../tabbar judul/judul.dart';
-
-// ignore:
-class gruplink extends StatefulWidget {
-  const gruplink({super.key});
+// ignore: camel_case_types
+class Dribllemain extends StatefulWidget {
+  const Dribllemain({super.key});
 
   @override
-  State<gruplink> createState() => _gruplinkState();
+  State<Dribllemain> createState() => _DaftarLink();
 }
 
 final List<Tab> myTabs = List.generate(
-  3,
+  7,
   (index) => Tab(text: 'TAB $index'),
 );
 
-class _gruplinkState extends State<gruplink>
+// ignore: camel_case_types
+class _DaftarLink extends State<Dribllemain>
     with SingleTickerProviderStateMixin {
   late TabController tabController;
 
@@ -36,7 +32,7 @@ class _gruplinkState extends State<gruplink>
 
   @override
   void initState() {
-    tabController = TabController(length: 3, vsync: this);
+    tabController = TabController(length: 7, vsync: this);
     super.initState();
   }
 
@@ -46,7 +42,7 @@ class _gruplinkState extends State<gruplink>
     super.dispose();
   }
 
-// class _gruplinkState extends State<gruplink> {
+// class _DaftarLink extends State<Dribllemain> {
   // File? image;
   // late TabController tabController;
 
@@ -62,42 +58,35 @@ class _gruplinkState extends State<gruplink>
 
   @override
   Widget build(BuildContext context) {
-    // ignore: unused_local_variable
-    Size size = MediaQuery.of(context).size;
     return Container(
       decoration: const BoxDecoration(
-          borderRadius: BorderRadius.all(
-            Radius.circular(
-              10,
-            ),
+        borderRadius: BorderRadius.all(
+          Radius.circular(
+            10,
           ),
-          color: Color.fromARGB(225, 37, 154, 185)),
-      margin: const EdgeInsets.only(left: 13, right: 13, bottom: 13, top: 13),
+        ),
+        color: Color.fromARGB(225,37, 154, 185),
+      ),
+   
       child: ExpansionTile(
         collapsedIconColor: const Color.fromARGB(255, 0, 0, 0),
         title: Container(
           transform: Matrix4.translationValues(8, 0, 10),
           decoration:
-              const BoxDecoration(color: Color.fromRGBO(37, 154, 185, 0.1)),
+              const BoxDecoration(color: Color.fromRGBO(37, 154, 185, 0.0)),
           child:
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
             Row(
-              children: const [
-                Icon(
-                  Icons.file_copy_outlined,
-                  // color: biruColor,
-                  size: 25,
-                  color: Colors.black,
-                ),
-                SizedBox(
+              children: [
+         Image.asset("images/drible.png"),
+                const SizedBox(
                   width: 10,
                 ),
-                Text('Buat Grup Link Baru',
+                const Text('Dribble',
                     style: TextStyle(
                         color: Colors.black, fontWeight: FontWeight.bold)),
               ],
             ),
-        
           ]),
         ),
         children: <Widget>[
@@ -125,7 +114,7 @@ class _gruplinkState extends State<gruplink>
     // ignore: sized_box_for_whitespace
     return Container(
       // padding: EdgeInsets.symmetric(horizontal: 15),
-      height: 300,
+      height: 320,
       child: Column(
         children: [
           Container(
@@ -135,6 +124,7 @@ class _gruplinkState extends State<gruplink>
                 Container(
                   decoration: const BoxDecoration(),
                   child: TabBar(
+                    isScrollable: true,
                     unselectedLabelColor: Colors.black,
                     // labelColor: Colors.black,
                     // indicatorColor: Colors.black,
@@ -146,16 +136,40 @@ class _gruplinkState extends State<gruplink>
                       borderRadius: BorderRadius.circular(1),
                     ),
                     controller: tabController,
-                    tabs: const [
+                    
+                    tabs:   const [
+                      // 1
                       Tab(
                         child: Text(
-                          "Link",
+                          "Judul",
                           style: TextStyle(
                             fontFamily: 'ubuntu',
                             fontSize: 17,
                           ),
                         ),
                       ),
+                      // 2
+                      Tab(
+                        child: Text(
+                          "sublink",
+                          style: TextStyle(
+                            fontFamily: 'ubuntu',
+                            fontSize: 17,
+                           
+                          ),
+                        ),
+                      ),
+                      // 3
+                      Tab(
+                        child: Text(
+                          "Warna",
+                          style: TextStyle(
+                            fontFamily: 'ubuntu',
+                            fontSize: 17,
+                          ),
+                        ),
+                      ),
+                      // 4
                       Tab(
                         child: Text(
                           "Ikon",
@@ -165,9 +179,30 @@ class _gruplinkState extends State<gruplink>
                           ),
                         ),
                       ),
+                      // 5
                       Tab(
                         child: Text(
-                          "Warna Link",
+                          "Penjadwalan",
+                          style: TextStyle(
+                            fontFamily: 'ubuntu',
+                            fontSize: 17,
+                          ),
+                        ),
+                      ),
+                      // 6
+                      Tab(
+                        child: Text(
+                          "Animasi",
+                          style: TextStyle(
+                            fontFamily: 'ubuntu',
+                            fontSize: 17,
+                          ),
+                        ),
+                      ),
+                      // 7
+                      Tab(
+                        child: Text(
+                          "Arahkan",
                           style: TextStyle(
                             fontFamily: 'ubuntu',
                             fontSize: 17,
@@ -183,7 +218,15 @@ class _gruplinkState extends State<gruplink>
           Expanded(
             child: TabBarView(
               controller: tabController,
-              children: const [grupLinkbaru(), ikonGrupbaru(), ubahwarnagruplink()],
+              children: const [
+                Dribble(),
+                // subLink(),
+                // warnaLinkbaru(),
+                // ikonLinkBaru(),
+                // penjadwalanLink(),
+                // animasiLinkbaru(),
+                // arahkanlinkbaru()
+              ],
             ),
           ),
         ],

@@ -5,11 +5,13 @@ import 'package:berbagilink/widgets/colorStyle.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
-class animasiLinkbaru extends StatefulWidget {
-  const animasiLinkbaru({super.key});
+import '../../../../halamanUtama/halamanutama.dart';
+
+class ubahwarnagruplink extends StatefulWidget {
+  const ubahwarnagruplink({super.key});
 
   @override
-  State<animasiLinkbaru> createState() => _Tabs1State();
+  State<ubahwarnagruplink> createState() => _Tabs1State();
 }
 
 final List<Tab> myTabs = List.generate(
@@ -17,7 +19,7 @@ final List<Tab> myTabs = List.generate(
   (index) => Tab(text: 'TAB $index'),
 );
 
-class _Tabs1State extends State<animasiLinkbaru>
+class _Tabs1State extends State<ubahwarnagruplink>
     with SingleTickerProviderStateMixin {
   late TabController tabController;
 
@@ -41,12 +43,10 @@ class _Tabs1State extends State<animasiLinkbaru>
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return  Container(
+    return Container(
       decoration: BoxDecoration(
-        
         color: Colors.white,
         borderRadius: const BorderRadius.only(
-        
             bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
         border: Border.all(color: Colors.black),
       ),
@@ -59,79 +59,39 @@ class _Tabs1State extends State<animasiLinkbaru>
             const SizedBox(
               height: 16,
             ),
-            //Judul
-            
-            const SizedBox(
-              height: 16,
-            ),
 
+            //Judul
             Row(
-              children: const [
-                Text(
-                  "Animasi",
-                  style: TextStyle(fontWeight: FontWeight.bold),
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    if (isDisabled == true) {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => BerbagiLink(),
+                        ),
+                      );
+                    }
+                  },
+                  child: Switch(
+                      focusColor: Colors.black,
+                      activeColor: Colors.blue,
+                      value: isDisabled,
+                      onChanged: (check) {
+                        setState(() {
+                          isDisabled = check;
+                        });
+                      }),
                 ),
               ],
             ),
             const SizedBox(
-              height: 30,
+              height: 16,
             ),
-  Column(
-              children: [
-                Container(
-                  height: 50,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(
-                      10,
-                    ),
-                    border: Border.all(
-                      width: 0.3,
-                      color: black1Color,
-                    ),
-                  ),
-                  child: ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        // ignore: deprecated_member_use
-                        backgroundColor: Colors.orangeAccent.shade100,
-                        
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(
-                            10,
-                          ),
-                        ),
-                      ),
-                      child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          
-                          Row(
-                            children: [
-                              const Padding(padding: EdgeInsets.only(left: 10)),
-                              Text(
-                                "Pilih Tipe",
-                                style: TextStyle(
-                                  color: black1Color,
-                                  fontWeight: FontWeight.w800,
-                                ),
-                              ),
-                            ],
-                          ),
-                              Row(
-                                children: const [
-                                  Icon(Icons.keyboard_arrow_down_sharp,color: Colors.black,),
-                                ],
-                              )
-                        ],
-                      )),
-                )
-              ],
-            ),
-          
-            
 
             const SizedBox(
-              height: 50,
+              height: 100,
             ),
 
             Row(

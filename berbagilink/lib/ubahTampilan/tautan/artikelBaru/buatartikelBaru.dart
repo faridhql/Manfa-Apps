@@ -5,6 +5,7 @@ import 'package:berbagilink/widgets/colorStyle.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
+// ignore: camel_case_types
 class buatArtikelbaru extends StatefulWidget {
   const buatArtikelbaru({super.key});
 
@@ -17,7 +18,9 @@ class _artikelbaruState extends State<buatArtikelbaru> {
   File? image;
 
   Future getImage() async {
+    // ignore: no_leading_underscores_for_local_identifiers
     final ImagePicker _picker = ImagePicker();
+    // ignore: non_constant_identifier_names
     final XFile? ImagePicked =
         await _picker.pickImage(source: ImageSource.gallery);
     image = File(ImagePicked!.path);
@@ -33,13 +36,13 @@ class _artikelbaruState extends State<buatArtikelbaru> {
       decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(
             Radius.circular(
-              10,
+              13,
             ),
           ),
           color: Color.fromARGB(225, 37, 154, 185)),
       margin: const EdgeInsets.only(left: 13, right: 13, bottom: 13, top: 13),
       child: ExpansionTile(
-        collapsedIconColor: Color.fromARGB(255, 0, 0, 0),
+        collapsedIconColor: const Color.fromARGB(255, 0, 0, 0),
         title: Container(
           transform: Matrix4.translationValues(8, 0, 10),
           decoration:
@@ -90,7 +93,7 @@ class _artikelbaruState extends State<buatArtikelbaru> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("Tampilkan Foto"),
+                      const Text("Tampilkan Foto"),
                       Switch(
                           focusColor: Colors.black,
                           activeColor: Colors.blue,

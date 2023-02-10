@@ -95,13 +95,11 @@ class _UbahTampilanState extends State<UbahTampilan>
         ],
       ),
       body: SingleChildScrollView(
-        child:  Container(
-          child: Column(
-            children: [
-              const Padding(padding: EdgeInsets.only(top: 15)),
-              _tabsWidget(),
-            ],
-          ),
+        child:  Column(
+          children: [
+            const Padding(padding: EdgeInsets.only(top: 15)),
+            _tabsWidget(),
+          ],
         ),
       ),
     );
@@ -118,7 +116,7 @@ class _UbahTampilanState extends State<UbahTampilan>
           const SizedBox(height: 16),
           // ignore: sized_box_for_whitespace
           Container(
-            padding: EdgeInsets.only(left: 15, right: 15),
+            padding: const EdgeInsets.only(left: 15, right: 15),
             width: MediaQuery.of(context).size.height,
             child: Column(
               children: [

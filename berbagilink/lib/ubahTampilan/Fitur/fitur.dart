@@ -94,7 +94,13 @@ class _DatePickerState extends State<Fitur> {
                   ],
                 ),
                 IconButton(
-                  onPressed: (() {}),
+                  onPressed: (() {
+                             Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const EventOnline()),
+                    );
+                  }),
                   icon: const Icon(Icons.arrow_forward_sharp),
                 )
               ],

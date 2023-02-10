@@ -45,7 +45,7 @@ class _Tabs1State extends State<arahkanlinkbaru>
       decoration: BoxDecoration(
         
         color: Colors.white,
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
         
             bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
         border: Border.all(color: Colors.black),
@@ -63,7 +63,7 @@ class _Tabs1State extends State<arahkanlinkbaru>
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Tampilkan Judul"),
+                const Text("Tampilkan Judul",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700),),
                 Switch(
                     focusColor: Colors.black,
                     
@@ -80,48 +80,11 @@ class _Tabs1State extends State<arahkanlinkbaru>
               height: 16,
             ),
 
-            Row(
-              children: [
-                Text(
-                  "Judul",
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-
-            TextField(
-              autocorrect: false,
-              keyboardType: TextInputType.text,
-              // obscureText: _obsecure,
-              style: const TextStyle(
-                fontSize: 20,
-              ),
-              decoration: InputDecoration(
-                hintStyle: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontStyle: FontStyle.normal,
-                  fontSize: 14,
-                  color: Colors.grey,
-                ),
-                hintText: 'Masukkan Judul',
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
-                  borderSide: BorderSide(
-                    color: Colors.grey,
-                  ),
-                ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(15),
-                ),
-              ),
-            ),
+         
             
 
-            SizedBox(
-              height: 30,
+            const SizedBox(
+              height: 130,
             ),
 
             Row(

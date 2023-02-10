@@ -1,3 +1,4 @@
+import 'package:berbagilink/halamanUtama/halamanutama.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/colorStyle.dart';
@@ -36,23 +37,24 @@ class _TemaState extends State<Tema> with SingleTickerProviderStateMixin {
     super.dispose();
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: Color(0xE0259AB9),
+        backgroundColor: const Color(0xE0259AB9),
         toolbarHeight: 70,
         elevation: 0,
         title: Row(
           children: [
             IconButton(
               onPressed: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(
-                //     builder: (context) => BerbagiLink(),
-                //   ),
-                // );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => BerbagiLink(),
+                  ),
+                );
               },
               icon: Icon(
                 Icons.arrow_back,

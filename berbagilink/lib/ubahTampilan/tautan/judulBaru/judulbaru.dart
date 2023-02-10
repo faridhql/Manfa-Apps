@@ -197,6 +197,7 @@ class _judulbaruState extends State<judulbaru>
             child: TabBarView(
               controller: tabController,
               children: const [Tabs1(), tab2(), tab3()],
+              
             ),
           ),
         ],
